@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DON'T be a cabbage</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        article {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- First story part -->
+    <article id="story-part-1">
+        <h2>開端</h2>
+        <p>拔拔麻麻說過：充足的陽光、空氣、水、養分是我們蔬菜長大的關鍵<br>
+           ...可是我都那麼努力曬太陽了，怎麼好像還是矮了旁邊的小捲心菜一點點？<br>
+           架子旁邊的番茄小姐長得又大又紅，還真是羨慕....<br>
+           總有一天我一定能跟拔拔麻麻一樣，成為一顆成熟的捲心菜...
+        </p>
+        <button onclick="chooseOption(1)">酷喔</button>
+    </article>
+
+    <!-- JavaScript to handle the story flow -->
+    <script>
+        function chooseOption(choice) {
+            // Hide all articles
+            const allArticles = document.querySelectorAll('article');
+            allArticles.forEach(article => article.style.display = 'none');
+
+            // Show next part based on the choice
+            if (choice === 1) {
+                showStoryPart2();
+            } else if (choice === 2) {
+                showStoryPart3();
+            } else if (choice === 3) {
+                showStoryPart4();
+            } else if (choice === 4) {
+                showStoryPart5();
+            } else if (choice === 5) {
+                showStoryPart6();
+            } else if (choice === 6) {
+                showStoryPart7();
+            } else if (choice === 7) {
+                showStoryPart8();
+            } else if (choice === 8) {
+                showStoryPart9();
+            } else if (choice === 9) {
+                showStoryPart10();
+            }
+        }
+
+        function resetGame() {
+            // Hide all story parts
+            const allArticles = document.querySelectorAll('article');
+            allArticles.forEach(article => article.style.display = 'none');
+
+            // Show the first part again
+            document.getElementById('story-part-1').style.display = 'block';
+        }
+
+        function showStoryPart2() {
+            const storyPart2 = document.createElement('article');
+            storyPart2.id = 'story-part-2';
+            storyPart2.innerHTML = `
+                <h2>1.夏天來了，這個地方開始變得越來越乾燥，可農夫卻遲遲不來澆水，再這樣下去我就要乾掉了：（</h2>
+                <button onclick="chooseOption(2)">從清晨開始做葉片舒展操，認真灌溉自己，爭取做一顆最美的捲心菜</button>
+                <button onclick="chooseOption(3)">如果農夫不來怎麼做都沒有用，當一顆自由的菜比較不會累</button>
+            `;
+            document.body.appendChild(storyPart2);
+        }
+
+        function showStoryPart3() {
+            const storyPart3 = document.createElement('article');
+            storyPart3.id = 'story-part-3';
+            storyPart3.innerHTML = `
+                <h2>2.才不管天氣多乾多熱，麻麻說多曬太陽才會長高。</h2>
+                <p>雖然很多次都快枯掉了，但忍耐一下就會過去的...吧？</p>
+                <button onclick="chooseOption(4)">再堅持看看，說不定等下農夫就來了</button>
+                <button onclick="chooseOption(5)">好累喔，躲在陰涼處休息一下也不會怎樣叭</button>
+            `;
+            document.body.appendChild(storyPart3);
+        }
+
+        function showStoryPart4() {
+            const storyPart4 = document.createElement('article');
+            storyPart4.id = 'story-part-4';
+            storyPart4.innerHTML = `
+                <h2>水是農夫在澆，如果他不來怎麼做都沒有用，當一顆自由的菜比較不會累</h2>
+                <p>放飛自我之後因為長得太奇形怪狀，被農夫一波無情收割，變成今晚的燉菜。這真是太悲傷了。</p>
+                <p>[成就解鎖：不為五斗米折腰]</p>
+                <button onclick="resetGame()">重新來過</button>
+            `;
+            document.body.appendChild(storyPart4);
+        }
+
+        function showStoryPart5() {
+            const storyPart5 = document.createElement('article');
+            storyPart5.id = 'story-part-5';
+            storyPart5.innerHTML = `
+                <h2>再堅持看看，說不定等下農夫就來了呢</h2>
+                <p>我毫不猶豫地擁抱陽光，但一不小心把自己弄到焦掉了。<br>那個不太喜歡醜蔬菜的農夫走過來，乾脆利落的把瑕疵品丟進垃圾桶。</p>
+                <button onclick="resetGame()">重新來過</button>
+            `;
+            document.body.appendChild(storyPart5);
+        }
+
+        function showStoryPart6() {
+            const storyPart6 = document.createElement('article');
+            storyPart6.id = 'story-part-6';
+            storyPart6.innerHTML = `
+                <h2>3.好累喔，躲在陰涼處休息一下也不會怎樣叭</h2>
+                <p>在休息的途中突然聽見旁邊的小捲心菜突然問起隔壁田的消息...你的腦中浮現了一個荒謬的想法</p>
+                <button onclick="chooseOption(6)">為什麼不找一個更能滋養我的地方作為棲息地？</button>
+                <button onclick="chooseOption(7)">繼續忍耐，抓住每一滴水分，期待農夫的到來。</button>
+            `;
+            document.body.appendChild(storyPart6);
+        }
+
+        function showStoryPart7() {
+            const storyPart7 = document.createElement('article');
+            storyPart7.id = 'story-part-7';
+            storyPart7.innerHTML = `
+                <h2>何去何從？</h2>
+                <p>既然這片田地這麼乾燥，為什麼不去尋找一個更能滋養我的地方作為棲息地？</p>
+                <button onclick="chooseOption(8)">假裝成盆栽，和其他造景們一起偷渡到隔壁農場</button>
+                <button onclick="chooseOption(9)">移動到靠近河道的區域</button>
+            `;
+            document.body.appendChild(storyPart7);
+        }
+    
+        function showStoryPart8() {
+            const storyPart8 = document.createElement('article');
+            storyPart8.id = 'story-part-8';
+            storyPart8.innerHTML = `
+                <h2>繼續忍耐，抓住每一滴水分，期待農夫的到來。</h2>
+                <p>最後還是乾掉了。如果我是一顆馬鈴薯，我的菜生會不會稍微簡單一點？？</p>
+                <p>[成就解鎖：貧賤不移的捲心菜]</p>
+                <button onclick="resetGame()">重新來過</button>
+            `;
+            document.body.appendChild(storyPart8);
+        }
+    
+        function showStoryPart9() {
+            const storyPart9 = document.createElement('article');
+            storyPart9.id = 'story-part-9';
+            storyPart9.innerHTML = `
+                <h2>假裝成盆栽，和其他造景們一起偷渡到隔壁農場</h2>
+                <p>我成了某個花園的裝飾，總是被丟在角落裡，沒有人在乎。跟著新認識的小小造景們生活在一起，也沒有想像中的艱辛...只是有時，總會不由自主的看向溫室窗外的風景....</p>
+                <p>[結局1：無名之菜]</p>
+                <button onclick="resetGame()">重新來過</button>
+            `;
+            document.body.appendChild(storyPart9);
+        }
+
+        function showStoryPart10() {
+            const storyPart10 = document.createElement('article');
+            storyPart10.id = 'story-part-10';
+            storyPart10.innerHTML = `
+                <h2>移動到靠近河道的區域</h2>
+                <p>途中不小心拉扯到了根部，還好有番茄小姐提供援助得以成功存活。<br>
+                   還是那顆普普通通的捲心菜，每天都在茁壯成長。</p>
+                <p>[結局2：普普通通的捲心菜]</p>
+                <button onclick="resetGame()">重新來過</button>
+            `;
+            document.body.appendChild(storyPart10);
+        }
+
+    </script>
+</body>
+</html>
